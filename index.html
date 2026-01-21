@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Village Tuition</title>
+
+  <!-- ================= CSS ================= -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f9fafb;
+      color: #222;
+      text-align: center;
+      padding: 16px;
+    }
+
+    header {
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .video-wrapper {
+      margin: 20px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 220px;
+      border: none;
+    }
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 12px auto;
+      padding: 14px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.02);
+      opacity: 0.9;
+    }
+
+    .instagram {
+      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+    }
+
+    .facebook {
+      background: #1877f2;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    /* Tablet & up */
+    @media (min-width: 600px) {
+      iframe {
+        height: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Village Tuition</h1>
+    <p>Education • Community • Future</p>
+  </header>
+
+  <!-- ================= VIDEO ================= -->
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/buBLDKEj0Ms"
+      title="Village Tuition Video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- ================= SOCIAL LINKS ================= -->
+  <div class="section">
+    <a
+      class="btn instagram"
+      href="https://www.instagram.com/villagetuition4321/"
+      target="_blank"
+      rel="noopener"
+    >
+      📸 Follow on Instagram
+    </a>
+
+    <a
+      id="fbLink"
+      class="btn facebook"
+      href="#"
+      target="_blank"
+      rel="noopener"
+    >
+      📘 Visit Facebook Page
+    </a>
+  </div>
+
+  <footer>
+    <p>© 2026 Village Tuition</p>
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script>
+    // Add Facebook page URL when available
+    const facebookPageURL = ""; 
+    // Example:
+    // const facebookPageURL = "https://www.facebook.com/villagetuition";
+
+    const fbLink = document.getElementById("fbLink");
+
+    if (!facebookPageURL) {
+      fbLink.style.display = "none";
+    } else {
+      fbLink.href = facebookPageURL;
+    }
+  </script>
+
+</body>
+</html>
